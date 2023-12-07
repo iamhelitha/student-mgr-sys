@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Student Details</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Gojo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="view.html">View all</a>
+                    <a class="nav-link" href="manage.html">Manage data</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-sm">
+        <h1 class="text-center" style="padding-top: 10px;">Student Record Management System of Gojo Education Institute
+        </h1>
+        <hr>
+        <h3>Search student details</h3>
+        <p>Allows you to search for specific student records based on various criteria, such as name, course enrollment,
+            or other available fields.</p>
+        <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect02">
+                <option value="1">SID</option>
+                <option value="2">First Name</option>
+                <option value="3">Last Name</option>
+                <option value="4">Email</option>
+                <option value="5">Nearest City</option>
+                <option value="6">Course</option>
+                <option value="7">Guardian</option>
+            </select>
+            <input type="text" id="sid" class="form-control" aria-label="Text input with dropdown button">
+            <button class="btn btn-outline-secondary" id="btn-submit" type="submit">Button</button>
+
+        </div>
+    </div>
+
+    <div class="container-sm" id="student-details" style="display: none;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">SID</th>
+                    <td>
+                        <p id="student-sid"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">First Name</th>
+                    <td>
+                        <p id="student-firstName"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Last Name</th>
+                    <td colspan="2">
+                        <p id="student-lastName"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td colspan="2">
+                        <p id="student-email"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Nearest City</th>
+                    <td colspan="2">
+                        <p id="student-nearCity"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Course</th>
+                    <td colspan="2">
+                        <p id="student-course"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Guardian</th>
+                    <td colspan="2">
+                        <p id="student-guardian"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Subjects</th>
+                    <td colspan="2">
+                        <p id="student-subjects"> </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form id="error" style="display: none;">
+        <p>Student not found</p>
+        <button>Return to Search</button>
+    </form>
+
+    <div class="container text-center" id="student-menu">
+        <hr>
+        <h4>Managing Student Records</h4>
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card text-bg-dark mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">View all Student details</h5>
+                        <p class="card-text">View all the details of the registered students.</p>
+                        <a href="view.html" class="btn btn-outline-light">View details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-bg-dark mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Manage Student details</h5>
+                        <p class="card-text">Edit and manage student information, including deletion.</p>
+                        <a href="manage.html" class="btn btn-outline-light">Manage details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

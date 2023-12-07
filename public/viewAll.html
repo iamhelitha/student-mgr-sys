@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Gojo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="viewAll.html">View all</a>
+                    <a class="nav-link" href="addDetails.html">Add data</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="modal fade" id="updateStudentModal" tabindex="-1" role="dialog" aria-labelledby="updateStudentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateStudentModalLabel">Update Student</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <form id="updateStudentForm">
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="SId" class="form-label">SID</label>
+                                    <input type="text" class="form-control" id="SId" name="sid" placeholder="SID">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="FirstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName" name="FirstName"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="LastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" name="LastName"
+                                        placeholder="Last Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Email" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="Email" name="Email" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="NearCity" class="form-label">Nearest City</label>
+                                    <input type="text" class="form-control" id="NearCity" name="NearCity"
+                                        placeholder="Nearest City">
+                                </div>
+                            </div>
+    
+    
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Course</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Course[]" value="Foundation"
+                                            id="Foundation">
+                                        <label class="form-check-label" for="Foundation">Foundation</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Course[]" value="HND"
+                                            id="HND">
+                                        <label class="form-check-label" for="HND">HND</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Course[]" value="Degree"
+                                            id="Degree">
+                                        <label class="form-check-label" for="Degree">Degree</label>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Subjects</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Subjects[]" value="ETF"
+                                            id="ETF">
+                                        <label class="form-check-label" for="ETF">ETF</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Subjects[]" value="ORDBMS"
+                                            id="ORDBMS">
+                                        <label class="form-check-label" for="ORDBMS">ORDBMS</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Subjects[]" value="OOP"
+                                            id="OOP">
+                                        <label class="form-check-label" for="OOP">OOP</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Subjects[]" value="SE"
+                                            id="SE">
+                                        <label class="form-check-label" for="SE">SE</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Subjects[]" value="HCI"
+                                            id="HCI">
+                                        <label class="form-check-label" for="HCI">HCI</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Subjects[]" value="IP"
+                                            id="IP">
+                                        <label class="form-check-label" for="IP">IP</label>
+                                    </div>
+    
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Guardian" class="form-label">Guardian</label>
+                                    <input type="text" class="form-control" id="Guardian" name="Guardian"
+                                        placeholder="Guardian">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submitUpdate">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-sm">
+        <h1 class="text-center">Student Details</h1>
+        <hr>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">SID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nearest City</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Guardian</th>
+                    <th scope="col">Subjects</th>
+                    <th scope="col" colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here by the AJAX script -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        $.ajax({
+            url: 'http://localhost:3000/student',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                var tbody = $('tbody');
+                data.forEach(function(item) {
+                    var row = $('<tr>');
+                    row.append($('<td>').text(item.sid));
+                    row.append($('<td>').text(item.FirstName));
+                    row.append($('<td>').text(item.LastName));
+                    row.append($('<td>').text(item.Email));
+                    row.append($('<td>').text(item.NearCity));
+                    row.append($('<td>').text(item.Course.join(', ')));
+                    row.append($('<td>').text(item.Guardian));
+                    row.append($('<td>').text(item.Subjects.join(', ')));
+
+                    // Add "Update" button
+                    var updateButton = $('<button>').text('Update').addClass('btn btn-primary update-button');
+                    row.append($('<td>').append(updateButton));
+
+                    // Add "Delete" button
+                    var deleteButton = $('<button>').text('Delete').addClass('btn btn-danger delete-button');
+                    row.append($('<td>').append(deleteButton));
+
+                    tbody.append(row);
+                });
+
+                // Add click event handler for "Update" buttons
+                $('.update-button').click(function() {
+                    var row = $(this).closest('tr');
+                    var sid = row.children().first().text();
+
+                    // Fill the form with the selected student's data
+                    $('#updateStudentForm input[name="sid"]').val(sid);
+                    $('#updateStudentForm input[name="FirstName"]').val(row.children().eq(1).text());
+                    $('#updateStudentForm input[name="LastName"]').val(row.children().eq(2).text());
+                    $('#updateStudentForm input[name="Email"]').val(row.children().eq(3).text());
+                    $('#updateStudentForm input[name="NearCity"]').val(row.children().eq(4).text());
+                    $('#updateStudentForm input[name="Guardian"]').val(row.children().eq(6).text());
+
+                    // Get the Course and Subjects data from the row
+                    var courseData = row.children().eq(5).text().split(', ');
+                    var subjectsData = row.children().eq(7).text().split(', ');
+
+                    // Check the checkboxes based on the data
+                    $('#updateStudentForm input[name="Course[]"]').each(function() {
+                        if (courseData.includes($(this).val())) {
+                            $(this).prop('checked', true);
+                        } else {
+                            $(this).prop('checked', false);
+                        }
+                    });
+
+                    $('#updateStudentForm input[name="Subjects[]"]').each(function() {
+                        if (subjectsData.includes($(this).val())) {
+                            $(this).prop('checked', true);
+                        } else {
+                            $(this).prop('checked', false);
+                        }
+                    });
+
+                    // Show the modal
+                    $('#updateStudentModal').modal('show');
+                });
+
+                // Add click event handler for "Submit" button in the modal
+                $('#submitUpdate').click(function() {
+                    var updatedStudent = {
+                        // Get the updated student data from the form
+                        sid: $('#updateStudentForm input[name="sid"]').val(),
+                        FirstName: $('#updateStudentForm input[name="FirstName"]').val(),
+                        LastName: $('#updateStudentForm input[name="LastName"]').val(),
+                        Email: $('#updateStudentForm input[name="Email"]').val(),
+                        NearCity: $('#updateStudentForm input[name="NearCity"]').val(),
+                        Guardian: $('#updateStudentForm input[name="Guardian"]').val()
+                    };
+
+                    // Get the values of the checked Course checkboxes
+                    updatedStudent.Course = $('#updateStudentForm input[name="Course[]"]:checked').map(function() {
+                        return $(this).val();
+                    }).get();
+
+                    // Get the values of the checked Subjects checkboxes
+                    updatedStudent.Subjects = $('#updateStudentForm input[name="Subjects[]"]:checked').map(function() {
+                        return $(this).val();
+                    }).get();
+
+                    $.ajax({
+                        url: 'http://localhost:3000/student/' + updatedStudent.sid,
+                        type: 'PUT',
+                        data: updatedStudent,
+                        success: function(response) {
+                            console.log(response);
+                            $('#updateStudentModal').modal('hide'); // Hide the modal
+                            location.reload(); // Reload the page
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error('Error: ' + errorThrown);
+                        }
+                    });
+                });
+
+                // Add click event handler for "Delete" buttons
+                $('.delete-button').click(function() {
+                    var sid = $(this).closest('tr').children().first().text();
+                    $.ajax({
+                        url: 'http://localhost:3000/student/' + sid,
+                        type: 'DELETE',
+                        success: function(response) {
+                            console.log(response);
+                            location.reload(); // Reload the page
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error('Error: ' + errorThrown);
+                        }
+                    });
+                });
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('Error: ' + errorThrown);
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
