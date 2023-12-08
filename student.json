@@ -105,23 +105,21 @@
     ]
   },
   {
-    "sid": 1006,
+    "sid": "1006",
     "FirstName": "Justin",
     "LastName": "Bieber",
     "Email": "justin@gmail.com",
     "NearCity": "Colombo",
+    "Guardian": "John Doe",
     "Course": [
       "Foundation",
       "HND",
       "Degree"
     ],
-    "Guardian": "John Doe",
     "Subjects": [
       "ETF",
       "ORDBMS",
       "OOP",
-      "SE",
-      "HCI",
       "IP"
     ]
   }
