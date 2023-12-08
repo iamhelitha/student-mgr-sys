@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 app.use(express.json());
 
-// Search by types
+// Search by types with post method
 app.post('/search', (req, res) => {
     const searchType = req.body.searchType;
     const searchValue = req.body.searchValue;
@@ -34,7 +34,7 @@ app.post('/search', (req, res) => {
     });
 });
 
-//view all
+//view all students with get method
 app.get('/student', (req, res) => {
     fs.readFile('student.json', 'utf8', (err, data) => {
         if (err) {
@@ -49,7 +49,7 @@ app.get('/student', (req, res) => {
 
 
 
-// add new students
+// add new students with post method
 app.post('/student', (req, res) => {
     const newStudent = req.body;
 
@@ -73,7 +73,7 @@ app.post('/student', (req, res) => {
     });
 });
 
-// Update a student
+// Update a student with put method
 app.put('/student/:sid', (req, res) => {
     const sid = req.params.sid;
     const updatedStudent = req.body;
@@ -104,7 +104,7 @@ app.put('/student/:sid', (req, res) => {
     });
 });
 
-// Delete a student
+// Delete a student using delete method
 app.delete('/student/:sid', (req, res) => {
     const sid = req.params.sid;
 
