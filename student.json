@@ -21,17 +21,17 @@
     ]
   },
   {
-    "sid": 1002,
+    "sid": "1002",
     "FirstName": "Liam",
     "LastName": "Payne",
     "Email": "liam@gmail.com",
-    "NearCity": "Colombo",
+    "NearCity": "Kalutara",
+    "Guardian": "John Doe",
     "Course": [
       "Foundation",
       "HND",
       "Degree"
     ],
-    "Guardian": "John Doe",
     "Subjects": [
       "ETF",
       "ORDBMS",
@@ -109,7 +109,7 @@
     "FirstName": "Justin",
     "LastName": "Bieber",
     "Email": "justin@gmail.com",
-    "NearCity": "Colombo",
+    "NearCity": "Jaffna",
     "Guardian": "John Doe",
     "Course": [
       "Foundation",
@@ -117,7 +117,6 @@
       "Degree"
     ],
     "Subjects": [
-      "ETF",
       "ORDBMS",
       "OOP",
       "IP"
