@@ -44,8 +44,9 @@ This project is a web-based Student Record Management System designed for an edu
 
 1. Clone the repository.
 2. Install dependencies using `npm install`.
-3. Run the server using `npm start`.
-4. Access the application through the provided URL.
+3. Install express using `npm install express`.
+4. Run the server using `npm start` or `node server.js`.
+5. Access the application through the provided URL.
 
 ## Contributors
 
