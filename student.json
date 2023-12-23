@@ -7,15 +7,11 @@
     "NearCity": "Colombo",
     "Guardian": "James Cameron",
     "Course": [
-      "Foundation",
-      "HND",
-      "Degree"
+      "HND"
     ],
     "Subjects": [
       "ETF",
-      "ORDBMS",
       "OOP",
-      "SE",
       "HCI",
       "IP"
     ]
@@ -42,23 +38,20 @@
     ]
   },
   {
-    "sid": 1003,
+    "sid": "1003",
     "FirstName": "Louis",
     "LastName": "Tomlinson",
     "Email": "louis@gmail.com",
     "NearCity": "Galle",
+    "Guardian": "Jane Doe",
     "Course": [
       "Foundation",
       "HND",
       "Degree"
     ],
-    "Guardian": "Jane Doe",
     "Subjects": [
-      "ETF",
-      "ORDBMS",
       "OOP",
       "SE",
-      "HCI",
       "IP"
     ]
   },
